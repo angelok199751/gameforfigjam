@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мини-игра карточки</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    img { max-width: 300px; margin-top: 20px; }
+    button { font-size: 18px; padding: 10px 20px; margin-top: 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Случайная карточка</h1>
+  <img id="cardImage" src="" alt="Карточка" />
+  <br />
+  <button onclick="showRandomCard()">Случайная карта</button>
+
+  <script>
+    const cards = [
+      "https://raw.githubusercontent.com/angelok199751/gameforfigjam/refs/heads/main/1.png",
+    "https://raw.githubusercontent.com/angelok199751/gameforfigjam/refs/heads/main/2.png",
+    "https://raw.githubusercontent.com/angelok199751/gameforfigjam/refs/heads/main/3.png",
+     "https://raw.githubusercontent.com/angelok199751/gameforfigjam/refs/heads/main/4.png",
+     "https://raw.githubusercontent.com/angelok199751/gameforfigjam/refs/heads/main/5.png"
+    ];
+
+    function showRandomCard() {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      const cardUrl = cards[randomIndex];
+      document.getElementById('cardImage').src = cardUrl;
+    }
+  </script>
+</body>
+</html>
